@@ -104,7 +104,7 @@ namespace Sql2Csv
             }
             foreach (DataRow row in sourceTable.Rows)
             {
-                row.ItemArray.Select(field => field.ToString());
+               // row.ItemArray.Select(field => field.ToString());
                 myRow = string.Join(STR_VBTab, row.ItemArray.Select(obj => QuoteValue(obj.ToString())));
                 writer.WriteLine(myRow);
             }
