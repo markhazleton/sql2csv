@@ -5,6 +5,8 @@
 [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/markhazleton/DataSpark/main/coverage-badge.json)](#testing)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+**Live Site**: [https://data.makeboldspark.com](https://data.makeboldspark.com)
+
 A .NET 10 toolkit for working with SQLite databases: discover files, export tables to CSV, inspect schema, and generate C# DTOs. The solution includes a CLI, a web UI, a core library, tests, and benchmarks.
 
 ## Projects
@@ -100,6 +102,13 @@ DataSpark/
   DataSpark.Benchmarks/ # Benchmarks
   DataSpark.sln
 ```
+
+## About
+
+DataSpark is a .NET 10 toolkit that demonstrates SQLite database discovery, CSV export, schema inspection, and C# DTO generation through both a CLI and a web UI. The live deployment is available at [https://data.makeboldspark.com](https://data.makeboldspark.com).
+
+> Built by [Mark Hazleton](https://markhazleton.com) — Mark Hazleton, Solutions Architect
+> DataSpark is part of the [Make Bold Spark](https://makeboldspark.com) portfolio of technical demonstrations.
 
 ## Contributing
 

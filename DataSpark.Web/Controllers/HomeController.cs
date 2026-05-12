@@ -2,6 +2,7 @@ using DataSpark.Core.Interfaces;
 using DataSpark.Core.Models.Analysis;
 using DataSpark.Web.Models;
 using DataSpark.Web.Services;
+using Markdig;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -69,6 +70,20 @@ public class HomeController : BaseController
     public IActionResult Privacy()
     {
         return View();
+    }
+
+    public async Task<IActionResult> ProjectDocumentation()
+    {
+        var readmePath = Path.Combine(_env.ContentRootPath, "..", "README.md");
+        if (!System.IO.File.Exists(readmePath))
+        {
+            _logger.LogWarning("Project documentation README not found at path: {Path}", readmePath);
+            return NotFound("Project documentation was not found.");
+        }
+
+        var markdown = await System.IO.File.ReadAllTextAsync(readmePath).ConfigureAwait(false);
+        var html = Markdown.ToHtml(markdown);
+        return View("ProjectDocumentation", html);
     }
 
     public async Task<IActionResult> CompleteAnalysis(string? fileName)

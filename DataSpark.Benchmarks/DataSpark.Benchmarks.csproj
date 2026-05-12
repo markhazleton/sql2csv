@@ -14,9 +14,9 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="BenchmarkDotNet" Version="0.15.8" />
-        <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.5" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.5" />
-        <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.5" />
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.7" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.7" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.7" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\DataSpark.Core\DataSpark.Core.csproj" />

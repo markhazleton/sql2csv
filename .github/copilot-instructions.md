@@ -181,7 +181,7 @@ public class ExportOptions
 - Use TempData for user messages and maintain state properly
 - File uploads should validate file type and size
 
-### Database Patterns
+## Database Patterns
 
 ```csharp
 // Preferred database access pattern
@@ -229,6 +229,11 @@ public async Task<IEnumerable<TableInfo>> GetTablesAsync(string connectionString
   **Focus**: [Brief description]
   **Files Modified**: [List of files]
   ```
+- Render markdown documentation as HTML within the site instead of linking directly to raw .md files:
+  - Render server-side or at build time using a trusted markdown renderer (e.g., Markdig).
+  - Sanitize rendered HTML to prevent XSS and enforce a content security policy.
+  - Apply site styling and syntax highlighting for consistency.
+  - Cache rendered pages and provide permalinks for documentation entries.
 
 ### Terminal Session Management
 

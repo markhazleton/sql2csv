@@ -1,0 +1,13 @@
+@model string
+@{
+    ViewData["Title"] = "Project Documentation";
+}
+
+<div class="container py-4">
+    <h1 class="mb-4">Project Documentation</h1>
+    <div class="card">
+        <div class="card-body markdown-body">
+            @Html.Raw(Model)
+        </div>
+    </div>
+</div>
